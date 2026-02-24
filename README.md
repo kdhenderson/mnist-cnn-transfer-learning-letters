@@ -16,7 +16,7 @@ This project implements a Convolutional Neural Network (CNN) using TensorFlow 2/
 - Uses ReLU activation in hidden layers and softmax for 5-class classification
 - Includes proper preprocessing and evaluation
 
-### Transfer Learning Model (`mnist_transfer_learning.py`)
+### Transfer Learning Model (`src/mnist_transfer_learning_tuned.py`)
 - Loads the pre-trained model from the base CNN
 - Freezes the convolutional and hidden layers
 - Replaces the output layer for classifying digits 5-9
@@ -146,15 +146,15 @@ The following table summarizes how each script names and saves its outputs. All 
 
 | Script                        | Figures (plots)                                   | Results JSON                                    | Model Directory (SavedModel)                      |
 |-------------------------------|---------------------------------------------------|--------------------------------------------------|---------------------------------------------------|
-| **mnist_cnn.py**              | `figures/training_history_<timestamp>.png`        | `results/training_results_<timestamp>.json`      | `results/mnist_cnn_model_<timestamp>/`            |
-| **mnist_transfer_learning_tuned.py** | `figures/transfer_tuned_training_history_<timestamp>.png` | `results/transfer_tuned_training_results_<timestamp>.json` | `results/mnist_transfer_tuned_model_<timestamp>/` |
-| **train_mnist_base.py**       | `figures/mnist_cnn_training_history_<timestamp>.png` | `results/training_results_<timestamp>.json`      | `results/mnist_cnn_model_<timestamp>/`            |
-| **transfer_to_letters.py**    | `figures/transfer_letters_noaug_training_history_<timestamp>.png`<br>`figures/transfer_letters_aug_training_history_<timestamp>.png`<br>`figures/transfer_letters_noaug_confusion_matrix_<timestamp>.png`<br>`figures/transfer_letters_aug_confusion_matrix_<timestamp>.png` | `results/transfer_letters_noaug_training_results_<timestamp>.json`<br>`results/transfer_letters_aug_training_results_<timestamp>.json` | `results/mnist_transfer_letters_model_transfer_letters_noaug_<timestamp>/`<br>`results/mnist_transfer_letters_model_transfer_letters_aug_<timestamp>/` |
+| **src/mnist_cnn.py**              | `figures/training_history_<timestamp>.png`        | `results/training_results_<timestamp>.json`      | `results/mnist_cnn_model_<timestamp>/`            |
+| **src/mnist_transfer_learning_tuned.py** | `figures/transfer_tuned_training_history_<timestamp>.png` | `results/transfer_tuned_training_results_<timestamp>.json` | `results/mnist_transfer_tuned_model_<timestamp>/` |
+| **src/train_mnist_base.py**       | `figures/mnist_cnn_training_history_<timestamp>.png` | `results/training_results_<timestamp>.json`      | `results/mnist_cnn_model_<timestamp>/`            |
+| **src/transfer_to_letters.py**    | `figures/transfer_letters_noaug_training_history_<timestamp>.png`<br>`figures/transfer_letters_aug_training_history_<timestamp>.png`<br>`figures/transfer_letters_noaug_confusion_matrix_<timestamp>.png`<br>`figures/transfer_letters_aug_confusion_matrix_<timestamp>.png` | `results/transfer_letters_noaug_training_results_<timestamp>.json`<br>`results/transfer_letters_aug_training_results_<timestamp>.json` | `results/mnist_transfer_letters_model_transfer_letters_noaug_<timestamp>/`<br>`results/mnist_transfer_letters_model_transfer_letters_aug_<timestamp>/` |
 
 - `<timestamp>` is the date and time the script was run, ensuring unique and chronological output files.
 - All figures are saved in the `figures/` directory.
 - All results JSON files and model directories are saved in the `results/` directory.
-- For `transfer_to_letters.py`, the prefix `noaug` or `aug` indicates whether data augmentation was used.
+- For `src/transfer_to_letters.py`, the prefix `noaug` or `aug` indicates whether data augmentation was used.
 
 Refer to this table to quickly locate the outputs from each experiment for analysis or reporting. 
 
