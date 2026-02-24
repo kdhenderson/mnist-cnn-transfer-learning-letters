@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+*.venv/
+
+# OS / editor artifacts
+.DS_Store
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights and checkpoints
+*.h5
+*.hdf5
+*.ckpt
+
+# Experiment outputs (keep figures/results JSON if desired)
+results/mnist_cnn_model_*/
+results/mnist_transfer_tuned_model_*/
+results/mnist_transfer_letters_model_*/
+
+# Local archives
+Kristin_Henderson_CNN_transferLearning_wMnist.zip
+
